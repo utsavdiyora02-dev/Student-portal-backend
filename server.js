@@ -56,6 +56,7 @@ app.use(cors({
     'http://localhost:5000',
     'http://127.0.0.1:5500',      // VS Code Live Server
     'http://localhost:5500',
+    'https://student-portal-frontend-qg6f.onrender.com',
     // Add your deployed frontend URL here when you deploy
     // 'https://your-app.netlify.app'
   ],
