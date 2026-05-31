@@ -102,16 +102,16 @@ async function apiRequest(endpoint, method = 'GET', body = null, token = null) {
 
 const AuthAPI = {
   // Sign up a new student
-  signup: (userData) => apiRequest('/auth/signup', 'POST', userData),
+  signup: (userData) => apiRequest('/api/auth/signup', 'POST', userData),
 
   // Log in
-  login: (credentials) => apiRequest('/auth/login', 'POST', credentials),
+  login: (credentials) => apiRequest('/api/auth/login', 'POST', credentials),
 
   // Get current user's profile
-  getMe: () => apiRequest('/auth/me'),
+  getMe: () => apiRequest('/api/auth/me'),
 
   // Change password
-  changePassword: (passwords) => apiRequest('/auth/change-password', 'PUT', passwords),
+  changePassword: (passwords) => apiRequest('/api/auth/change-password', 'PUT', passwords),
 };
 
 // ============================================================
@@ -120,10 +120,10 @@ const AuthAPI = {
 
 const AttendanceAPI = {
   // Get all attendance for logged-in student
-  getMyAttendance: () => apiRequest('/attendance/my'),
+  getMyAttendance: () => apiRequest('/api/attendance/my'),
 
   // Get quick summary for dashboard
-  getSummary: () => apiRequest('/attendance/summary'),
+  getSummary: () => apiRequest('/api/attendance/summary'),
 };
 
 // ============================================================
@@ -132,22 +132,22 @@ const AttendanceAPI = {
 
 const AdminAPI = {
   // Admin login
-  login: (credentials) => apiRequest('/admin/login', 'POST', credentials),
+  login: (credentials) => apiRequest('/api/admin/login', 'POST', credentials),
 
   // Dashboard stats
-  getDashboard: () => apiRequest('/admin/dashboard'),
+  getDashboard: () => apiRequest('/api/admin/dashboard'),
 
   // Student CRUD
-  getAllStudents: () => apiRequest('/admin/students'),
-  getStudent: (id) => apiRequest(`/admin/students/${id}`),
-  createStudent: (data) => apiRequest('/admin/students', 'POST', data),
-  updateStudent: (id, data) => apiRequest(`/admin/students/${id}`, 'PUT', data),
-  deleteStudent: (id) => apiRequest(`/admin/students/${id}`, 'DELETE'),
+  getAllStudents: () => apiRequest('/api/admin/students'),
+  getStudent: (id) => apiRequest(`/api/admin/students/${id}`),
+  createStudent: (data) => apiRequest('/api/admin/students', 'POST', data),
+  updateStudent: (id, data) => apiRequest(`/api/admin/students/${id}`, 'PUT', data),
+  deleteStudent: (id) => apiRequest(`/api/admin/students/${id}`, 'DELETE'),
 
   // Attendance
-  markAttendance: (data) => apiRequest('/admin/attendance', 'POST', data),
-  getStudentAttendance: (studentId) => apiRequest(`/admin/attendance/${studentId}`),
-  markBulkAttendance: (data) => apiRequest('/admin/attendance/bulk', 'POST', data),
+  markAttendance: (data) => apiRequest('/api/admin/attendance', 'POST', data),
+  getStudentAttendance: (studentId) => apiRequest(`/api/admin/attendance/${studentId}`),
+  markBulkAttendance: (data) => apiRequest('/api/admin/attendance/bulk', 'POST', data),
 };
 
 // Make available globally
