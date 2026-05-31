@@ -1,0 +1,26 @@
+# ============================================================
+# .gitignore - Files NOT to upload to GitHub
+# ============================================================
+# IMPORTANT: Never upload these files publicly!
+# They contain passwords and secret keys.
+# ============================================================
+
+# Environment variables (contains your passwords and secrets!)
+.env
+*.env
+
+# Node modules (can be reinstalled with npm install)
+node_modules/
+*/node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Build output
+dist/
+build/
